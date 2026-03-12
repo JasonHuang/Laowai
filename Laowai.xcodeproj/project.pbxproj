@@ -17,8 +17,10 @@
 		3BC0C8EF7AFABD044868A3A3 /* PaymentWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E075540990884EE0C9AF0 /* PaymentWizardViewModel.swift */; };
 		411BBD892AFAF84C6AC8BA83 /* LaowaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2C8F1F0C9B8A4B8717593 /* LaowaiApp.swift */; };
 		4958FD2B94B01429D86F1273 /* PaymentStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C11BCBCC3B85ADD15D5E9B /* PaymentStepView.swift */; };
+		4C0FF976F41C7DD807FE4F2F /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E07AD4E08FB59056B4DA29 /* CameraViewModel.swift */; };
 		4C8792AD24E22DA7B10DDD62 /* CardLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E5F07B44525B94E4916C0 /* CardLibraryView.swift */; };
 		84F6E0458D1C59FF24FEC6AA /* PaymentStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDDC5E0D99C758F06F2F7B /* PaymentStep.swift */; };
+		8B66658447C21421888199AD /* CameraTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5F5E96F0636C049451796 /* CameraTranslateView.swift */; };
 		D1ED56F8CD1DC7C4D16C17F6 /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9308771F8BEA2E6976A46C6 /* JourneyView.swift */; };
 		D23A5B66CF493A8705938238 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71758195DDBF9ACA753E16 /* Card.swift */; };
 		D296CC00475CD32D8873FD7F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7417ADC103DDD193E2AC3E52 /* HomeView.swift */; };
@@ -36,12 +38,14 @@
 		5E71758195DDBF9ACA753E16 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		617A84BBEC2892E85125D2E7 /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		644E075540990884EE0C9AF0 /* PaymentWizardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWizardViewModel.swift; sourceTree = "<group>"; };
+		6CA5F5E96F0636C049451796 /* CameraTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTranslateView.swift; sourceTree = "<group>"; };
 		6F847446033E5C2AA8D51C41 /* PaymentWizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWizardView.swift; sourceTree = "<group>"; };
 		7417ADC103DDD193E2AC3E52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D1736CCFE3B8CECD4EA2EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8BA7E4D67CF3A7F95DED7A5E /* Laowai.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Laowai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD6B5F7662A75AE7B92C735 /* ShowAndPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAndPointView.swift; sourceTree = "<group>"; };
 		A5C11BCBCC3B85ADD15D5E9B /* PaymentStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStepView.swift; sourceTree = "<group>"; };
+		B0E07AD4E08FB59056B4DA29 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		B6844947C31B61BA09CC2E6F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		C9308771F8BEA2E6976A46C6 /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
 		CE2E5F07B44525B94E4916C0 /* CardLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLibraryView.swift; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 				C9308771F8BEA2E6976A46C6 /* JourneyView.swift */,
 			);
 			path = Journey;
+			sourceTree = "<group>";
+		};
+		2F5A34F5555557E4DAB42207 /* Translate */ = {
+			isa = PBXGroup;
+			children = (
+				6CA5F5E96F0636C049451796 /* CameraTranslateView.swift */,
+			);
+			path = Translate;
 			sourceTree = "<group>";
 		};
 		5AF7A56ED2E56A89E430C395 /* Products */ = {
@@ -131,6 +143,7 @@
 				294FC4B1D26D6BEC309114BB /* Journey */,
 				83573C1C73939B31301DC19F /* Onboarding */,
 				C4D6B1871C46F4A8EFFA371E /* Payment */,
+				2F5A34F5555557E4DAB42207 /* Translate */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 		CC2F2FC32762382C7C205AB6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B0E07AD4E08FB59056B4DA29 /* CameraViewModel.swift */,
 				3E786E6BFECD182EC4672F01 /* CardLibraryViewModel.swift */,
 				644E075540990884EE0C9AF0 /* PaymentWizardViewModel.swift */,
 			);
@@ -232,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E55E4D953C0C7A26C0B4EFC /* AppState.swift in Sources */,
+				8B66658447C21421888199AD /* CameraTranslateView.swift in Sources */,
+				4C0FF976F41C7DD807FE4F2F /* CameraViewModel.swift in Sources */,
 				D23A5B66CF493A8705938238 /* Card.swift in Sources */,
 				4C8792AD24E22DA7B10DDD62 /* CardLibraryView.swift in Sources */,
 				25F1BB89DA5220564DA02C1F /* CardLibraryViewModel.swift in Sources */,

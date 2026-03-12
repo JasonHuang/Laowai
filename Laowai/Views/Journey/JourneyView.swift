@@ -28,7 +28,7 @@ struct JourneyView: View {
                 }
                 .tag(Tab.payment)
 
-            TranslatePlaceholderView()
+            CameraTranslateView()
                 .tabItem {
                     Label("Translate", systemImage: "camera.viewfinder")
                 }
