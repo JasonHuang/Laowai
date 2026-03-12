@@ -1,0 +1,136 @@
+[
+  {
+    "id": "alipay",
+    "name": "Alipay International",
+    "icon": "💙",
+    "tagline": "Recommended for most tourists — easiest foreign card setup",
+    "steps": [
+      {
+        "id": "alipay-1",
+        "stepNumber": 1,
+        "title": "Download Alipay",
+        "description": "Download the Alipay app from the App Store. Make sure you download the international version — search for 'Alipay' (blue icon). Do this before you land in China as App Store access may be needed.",
+        "tips": [
+          "Use your home country App Store — not the Chinese one",
+          "The app icon is blue. Avoid the Chinese-only version with a different layout",
+          "App size is about 200MB — download on WiFi"
+        ],
+        "showAndPointCard": null
+      },
+      {
+        "id": "alipay-2",
+        "stepNumber": 2,
+        "title": "Create Your Account",
+        "description": "Open Alipay and tap 'Sign Up'. Enter your foreign phone number with your country code. You will receive an SMS verification code. Enter the code to verify.",
+        "tips": [
+          "Use a phone number you can receive SMS on — your home SIM works for signup",
+          "If you don't receive the SMS, tap 'Resend' after 60 seconds",
+          "Save your login credentials — you'll need them in China"
+        ],
+        "showAndPointCard": null
+      },
+      {
+        "id": "alipay-3",
+        "stepNumber": 3,
+        "title": "Add a Foreign Bank Card",
+        "description": "Go to 'Me' → 'Bank Cards' → 'Add Card'. Enter your Visa or Mastercard debit or credit card details. Alipay supports most international cards issued outside China.",
+        "tips": [
+          "Visa and Mastercard are both supported",
+          "Use a card with no foreign transaction fees if possible",
+          "Some prepaid cards may not be accepted — use a regular bank card",
+          "You may need to verify with a one-time charge from your bank"
+        ],
+        "showAndPointCard": null
+      },
+      {
+        "id": "alipay-4",
+        "stepNumber": 4,
+        "title": "Enable 'Tour Pass'",
+        "description": "Alipay has a special 'Tour Pass' feature for international visitors that allows you to top up a CNY balance using your foreign card. Go to the home screen and search for 'Tour Pass'. Load at least ¥200 to start.",
+        "tips": [
+          "Tour Pass gives you a CNY wallet — essential for seamless payments",
+          "Minimum top-up is usually ¥100, maximum varies by account level",
+          "The balance does not expire during your trip"
+        ],
+        "showAndPointCard": {
+          "chineseText": "我是外国游客，请帮我开通支付宝国际版",
+          "context": "Show to Alipay staff or a bilingual helper — asking for help activating Alipay International"
+        }
+      },
+      {
+        "id": "alipay-5",
+        "stepNumber": 5,
+        "title": "Pay with QR Code",
+        "description": "To pay, open Alipay and tap the 'Pay' button (付款码). Show the QR code to the cashier for them to scan. Alternatively, tap 'Scan' to scan the merchant's QR code yourself.",
+        "tips": [
+          "Most shops have a QR code displayed at the counter — just scan it",
+          "Taxis and small vendors usually prefer you showing your QR for them to scan",
+          "Make sure you have enough CNY balance in Tour Pass before paying"
+        ],
+        "showAndPointCard": {
+          "chineseText": "请扫我的付款码",
+          "context": "Show to cashier — means 'please scan my payment QR code'"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wechat-pay",
+    "name": "WeChat Pay",
+    "icon": "💚",
+    "tagline": "Widely accepted — requires WeChat account setup",
+    "steps": [
+      {
+        "id": "wechat-1",
+        "stepNumber": 1,
+        "title": "Download WeChat",
+        "description": "Download WeChat from the App Store. WeChat is both a messaging app and a payment platform. The payment feature is built in — no separate app needed.",
+        "tips": [
+          "Download before you arrive in China",
+          "WeChat is also China's most popular messaging app — useful for contacting hotels",
+          "App size is about 300MB"
+        ],
+        "showAndPointCard": null
+      },
+      {
+        "id": "wechat-2",
+        "stepNumber": 2,
+        "title": "Create a WeChat Account",
+        "description": "Open WeChat and tap 'Sign Up'. Register with your foreign phone number. You will need to verify via SMS. Important: WeChat may ask an existing user to confirm your account — ask a friend who has WeChat, or use the in-app verification option.",
+        "tips": [
+          "The 'security verification by a friend' step can be bypassed in some regions — try a few times",
+          "If you have a Chinese-speaking contact on WeChat already, ask them to verify you",
+          "Use your real phone number — WeChat requires SMS verification"
+        ],
+        "showAndPointCard": null
+      },
+      {
+        "id": "wechat-3",
+        "stepNumber": 3,
+        "title": "Set Up WeChat Pay with Foreign Card",
+        "description": "Go to 'Me' → 'Services' → 'WeChat Pay' → 'Wallet'. Tap 'Add a Card'. Enter your Visa or Mastercard details. WeChat Pay supports foreign cards for international users.",
+        "tips": [
+          "Only Visa and Mastercard are supported — Amex is not accepted",
+          "Your card issuer may flag the transaction — notify them before your trip",
+          "A small authorization charge may appear and then be refunded"
+        ],
+        "showAndPointCard": null
+      },
+      {
+        "id": "wechat-4",
+        "stepNumber": 4,
+        "title": "Pay with QR Code",
+        "description": "To pay, go to 'Me' → 'Services' → 'WeChat Pay' → 'Pay'. Show your payment QR code to the cashier. Or tap 'Scan' to scan the merchant's code. Some merchants have a single QR code that accepts both Alipay and WeChat Pay.",
+        "tips": [
+          "Look for the green WeChat Pay logo at checkout",
+          "If a merchant only accepts Alipay, you may need to use Alipay instead",
+          "Keep WeChat Pay open and ready — payments are fast once set up"
+        ],
+        "showAndPointCard": {
+          "chineseText": "请扫我的微信付款码",
+          "context": "Show to cashier — means 'please scan my WeChat Pay QR code'"
+        }
+      }
+    ]
+  }
+]

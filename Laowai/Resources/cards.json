@@ -1,0 +1,200 @@
+[
+  {
+    "id": "restaurant-no-spicy",
+    "category": "restaurant",
+    "title": "No spicy food please",
+    "chineseText": "不要辣，谢谢",
+    "englishNote": "Show this when ordering — means 'no spicy food, thank you'",
+    "pinyin": "Bù yào là, xièxiè",
+    "tags": ["food", "allergy", "ordering"]
+  },
+  {
+    "id": "restaurant-vegetarian",
+    "category": "restaurant",
+    "title": "I am vegetarian",
+    "chineseText": "我吃素，不吃肉",
+    "englishNote": "Show this when ordering — means 'I am vegetarian, I don't eat meat'",
+    "pinyin": "Wǒ chī sù, bù chī ròu",
+    "tags": ["food", "diet", "ordering"]
+  },
+  {
+    "id": "restaurant-no-pork",
+    "category": "restaurant",
+    "title": "No pork please",
+    "chineseText": "不要猪肉，谢谢",
+    "englishNote": "Show this when ordering — means 'no pork please, thank you'",
+    "pinyin": "Bù yào zhūròu, xièxiè",
+    "tags": ["food", "diet", "halal", "ordering"]
+  },
+  {
+    "id": "restaurant-menu-english",
+    "category": "restaurant",
+    "title": "Do you have an English menu?",
+    "chineseText": "有英文菜单吗？",
+    "englishNote": "Ask the waiter — means 'do you have an English menu?'",
+    "pinyin": "Yǒu yīngwén càidān ma?",
+    "tags": ["restaurant", "menu", "english"]
+  },
+  {
+    "id": "restaurant-bill",
+    "category": "restaurant",
+    "title": "Bill please",
+    "chineseText": "买单，谢谢",
+    "englishNote": "Show to your waiter when you want to pay",
+    "pinyin": "Mǎidān, xièxiè",
+    "tags": ["restaurant", "payment"]
+  },
+  {
+    "id": "transport-taxi-destination",
+    "category": "transport",
+    "title": "Take me to this address",
+    "chineseText": "请送我去这个地址",
+    "englishNote": "Show this to a taxi driver, then point to the address on the map",
+    "pinyin": "Qǐng sòng wǒ qù zhège dìzhǐ",
+    "tags": ["taxi", "transport", "navigation"]
+  },
+  {
+    "id": "transport-airport",
+    "category": "transport",
+    "title": "Take me to the airport",
+    "chineseText": "请送我去机场",
+    "englishNote": "Show this to a taxi driver — means 'please take me to the airport'",
+    "pinyin": "Qǐng sòng wǒ qù jīchǎng",
+    "tags": ["taxi", "airport", "transport"]
+  },
+  {
+    "id": "transport-train-station",
+    "category": "transport",
+    "title": "Take me to the train station",
+    "chineseText": "请送我去火车站",
+    "englishNote": "Show this to a taxi driver — means 'please take me to the train station'",
+    "pinyin": "Qǐng sòng wǒ qù huǒchēzhàn",
+    "tags": ["taxi", "train", "transport"]
+  },
+  {
+    "id": "transport-slow-down",
+    "category": "transport",
+    "title": "Please slow down",
+    "chineseText": "请开慢一点",
+    "englishNote": "Show to a taxi driver — means 'please drive slower'",
+    "pinyin": "Qǐng kāi màn yīdiǎn",
+    "tags": ["taxi", "safety"]
+  },
+  {
+    "id": "hotel-checkin",
+    "category": "hotel",
+    "title": "I have a reservation",
+    "chineseText": "我有预订，这是我的护照",
+    "englishNote": "Show at hotel reception — means 'I have a reservation, here is my passport'",
+    "pinyin": "Wǒ yǒu yùdìng, zhè shì wǒ de hùzhào",
+    "tags": ["hotel", "checkin"]
+  },
+  {
+    "id": "hotel-wifi",
+    "category": "hotel",
+    "title": "What is the WiFi password?",
+    "chineseText": "WiFi密码是多少？",
+    "englishNote": "Ask hotel staff — means 'what is the WiFi password?'",
+    "pinyin": "WiFi mìmǎ shì duōshao?",
+    "tags": ["hotel", "wifi", "internet"]
+  },
+  {
+    "id": "hotel-hot-water",
+    "category": "hotel",
+    "title": "No hot water in my room",
+    "chineseText": "我的房间没有热水",
+    "englishNote": "Show to hotel staff — means 'there is no hot water in my room'",
+    "pinyin": "Wǒ de fángjiān méiyǒu rèshuǐ",
+    "tags": ["hotel", "problem"]
+  },
+  {
+    "id": "shopping-how-much",
+    "category": "shopping",
+    "title": "How much does this cost?",
+    "chineseText": "这个多少钱？",
+    "englishNote": "Point to the item — means 'how much does this cost?'",
+    "pinyin": "Zhège duōshao qián?",
+    "tags": ["shopping", "price"]
+  },
+  {
+    "id": "shopping-too-expensive",
+    "category": "shopping",
+    "title": "Too expensive, can you discount?",
+    "chineseText": "太贵了，可以便宜一点吗？",
+    "englishNote": "Use at markets — means 'too expensive, can you give a discount?'",
+    "pinyin": "Tài guì le, kěyǐ piányí yīdiǎn ma?",
+    "tags": ["shopping", "bargain", "market"]
+  },
+  {
+    "id": "shopping-wechat-pay",
+    "category": "shopping",
+    "title": "I will pay by WeChat Pay",
+    "chineseText": "我用微信支付",
+    "englishNote": "Show at checkout — means 'I will pay with WeChat Pay'",
+    "pinyin": "Wǒ yòng Wēixìn zhīfù",
+    "tags": ["shopping", "payment", "wechat"]
+  },
+  {
+    "id": "shopping-alipay",
+    "category": "shopping",
+    "title": "I will pay by Alipay",
+    "chineseText": "我用支付宝",
+    "englishNote": "Show at checkout — means 'I will pay with Alipay'",
+    "pinyin": "Wǒ yòng Zhīfùbǎo",
+    "tags": ["shopping", "payment", "alipay"]
+  },
+  {
+    "id": "emergency-call-ambulance",
+    "category": "emergency",
+    "title": "Call an ambulance",
+    "chineseText": "请帮我叫救护车，这是紧急情况",
+    "englishNote": "Show to bystanders — means 'please call an ambulance, this is an emergency'",
+    "pinyin": "Qǐng bāng wǒ jiào jiùhùchē, zhè shì jǐnjí qíngkuàng",
+    "tags": ["emergency", "medical", "ambulance"]
+  },
+  {
+    "id": "emergency-police",
+    "category": "emergency",
+    "title": "Call the police",
+    "chineseText": "请帮我报警",
+    "englishNote": "Show to bystanders — means 'please call the police'",
+    "pinyin": "Qǐng bāng wǒ bàojǐng",
+    "tags": ["emergency", "police", "theft"]
+  },
+  {
+    "id": "emergency-lost-passport",
+    "category": "emergency",
+    "title": "I lost my passport",
+    "chineseText": "我的护照丢了，请问最近的派出所在哪里？",
+    "englishNote": "Show to police or hotel staff — means 'I lost my passport, where is the nearest police station?'",
+    "pinyin": "Wǒ de hùzhào diū le, qǐngwèn zuìjìn de pàichūsuǒ zài nǎlǐ?",
+    "tags": ["emergency", "passport", "police"]
+  },
+  {
+    "id": "general-no-understand",
+    "category": "general",
+    "title": "I don't understand, please write it down",
+    "chineseText": "我听不懂，能写下来吗？",
+    "englishNote": "Show when confused — asks someone to write down what they mean",
+    "pinyin": "Wǒ tīng bù dǒng, néng xiě xiàlái ma?",
+    "tags": ["communication", "language"]
+  },
+  {
+    "id": "general-translate-app",
+    "category": "general",
+    "title": "Please type it here for me",
+    "chineseText": "请帮我打出来，我用翻译软件",
+    "englishNote": "Ask someone to type so you can translate it — means 'please type it for me, I'll use a translation app'",
+    "pinyin": "Qǐng bāng wǒ dǎ chūlái, wǒ yòng fānyì ruǎnjiàn",
+    "tags": ["communication", "translation"]
+  },
+  {
+    "id": "general-where-toilet",
+    "category": "general",
+    "title": "Where is the toilet?",
+    "chineseText": "厕所在哪里？",
+    "englishNote": "Ask anyone nearby — means 'where is the toilet?'",
+    "pinyin": "Cèsuǒ zài nǎlǐ?",
+    "tags": ["general", "toilet"]
+  }
+]
