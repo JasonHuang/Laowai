@@ -3,11 +3,16 @@ import SwiftUI
 @main
 struct LaowaiApp: App {
     @StateObject private var appState = AppState()
+    @AppStorage("hasOnboarded") private var hasOnboarded = false
 
     var body: some Scene {
         WindowGroup {
-            JourneyView()
-                .environmentObject(appState)
+            if hasOnboarded {
+                JourneyView()
+                    .environmentObject(appState)
+            } else {
+                OnboardingView()
+            }
         }
     }
 }

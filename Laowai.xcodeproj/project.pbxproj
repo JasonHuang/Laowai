@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C3684F7180A98FFFB9FE808 /* payment_steps.json in Resources */ = {isa = PBXBuildFile; fileRef = 15E4C429A1B68CBAA781EE5C /* payment_steps.json */; };
+		104FA22614904CEDF26C58A0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E3E7CEC785D4E23852C35 /* OnboardingView.swift */; };
 		1317EE0613B9233C5A27A83F /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 617A84BBEC2892E85125D2E7 /* cards.json */; };
 		16D5CA543E7B518B8DFBE239 /* PaymentWizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F847446033E5C2AA8D51C41 /* PaymentWizardView.swift */; };
 		2444DBB4804BBE5BBF5646FD /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6844947C31B61BA09CC2E6F /* Color+Hex.swift */; };
@@ -30,6 +31,7 @@
 		1FF2C8F1F0C9B8A4B8717593 /* LaowaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaowaiApp.swift; sourceTree = "<group>"; };
 		3DDDDC5E0D99C758F06F2F7B /* PaymentStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStep.swift; sourceTree = "<group>"; };
 		3E786E6BFECD182EC4672F01 /* CardLibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLibraryViewModel.swift; sourceTree = "<group>"; };
+		453E3E7CEC785D4E23852C35 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		4825B1E8D3F4481F897EE61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E71758195DDBF9ACA753E16 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		617A84BBEC2892E85125D2E7 /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
@@ -37,7 +39,7 @@
 		6F847446033E5C2AA8D51C41 /* PaymentWizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWizardView.swift; sourceTree = "<group>"; };
 		7417ADC103DDD193E2AC3E52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D1736CCFE3B8CECD4EA2EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8BA7E4D67CF3A7F95DED7A5E /* Laowai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Laowai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA7E4D67CF3A7F95DED7A5E /* Laowai.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Laowai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD6B5F7662A75AE7B92C735 /* ShowAndPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAndPointView.swift; sourceTree = "<group>"; };
 		A5C11BCBCC3B85ADD15D5E9B /* PaymentStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStepView.swift; sourceTree = "<group>"; };
 		B6844947C31B61BA09CC2E6F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		83573C1C73939B31301DC19F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				453E3E7CEC785D4E23852C35 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		98162A569508A3FAD368E6FF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 				7417ADC103DDD193E2AC3E52 /* HomeView.swift */,
 				697002FA3DCC3C101538827A /* Cards */,
 				294FC4B1D26D6BEC309114BB /* Journey */,
+				83573C1C73939B31301DC19F /* Onboarding */,
 				C4D6B1871C46F4A8EFFA371E /* Payment */,
 			);
 			path = Views;
@@ -179,7 +190,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2620;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = C5DE6668FCED2ACEC52F4610 /* Build configuration list for PBXProject "Laowai" */;
 			developmentRegion = en;
@@ -226,6 +239,7 @@
 				D296CC00475CD32D8873FD7F /* HomeView.swift in Sources */,
 				D1ED56F8CD1DC7C4D16C17F6 /* JourneyView.swift in Sources */,
 				411BBD892AFAF84C6AC8BA83 /* LaowaiApp.swift in Sources */,
+				104FA22614904CEDF26C58A0 /* OnboardingView.swift in Sources */,
 				84F6E0458D1C59FF24FEC6AA /* PaymentStep.swift in Sources */,
 				4958FD2B94B01429D86F1273 /* PaymentStepView.swift in Sources */,
 				16D5CA543E7B518B8DFBE239 /* PaymentWizardView.swift in Sources */,
@@ -294,7 +308,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -308,7 +321,6 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -372,7 +384,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -393,7 +404,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
