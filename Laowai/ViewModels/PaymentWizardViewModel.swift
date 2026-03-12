@@ -1,11 +1,24 @@
 import Foundation
 
+private enum Keys {
+    static let providerId   = "payment_providerId"
+    static let stepIndex    = "payment_stepIndex"
+    static let completed    = "payment_completedSteps"
+}
+
 @MainActor
 final class PaymentWizardViewModel: ObservableObject {
     @Published var providers: [PaymentProvider] = []
-    @Published var selectedProvider: PaymentProvider?
-    @Published var currentStepIndex: Int = 0
-    @Published var completedSteps: Set<String> = []
+
+    @Published var selectedProvider: PaymentProvider? {
+        didSet { save() }
+    }
+    @Published var currentStepIndex: Int = 0 {
+        didSet { save() }
+    }
+    @Published var completedSteps: Set<String> = [] {
+        didSet { save() }
+    }
 
     var currentStep: PaymentStep? {
         guard let provider = selectedProvider,
@@ -25,6 +38,7 @@ final class PaymentWizardViewModel: ObservableObject {
 
     init() {
         loadProviders()
+        restore()
     }
 
     func selectProvider(_ provider: PaymentProvider) {
@@ -49,6 +63,30 @@ final class PaymentWizardViewModel: ObservableObject {
         selectedProvider = nil
         currentStepIndex = 0
         completedSteps = []
+    }
+
+    // MARK: - Persistence
+
+    private func save() {
+        let ud = UserDefaults.standard
+        ud.set(selectedProvider?.id, forKey: Keys.providerId)
+        ud.set(currentStepIndex,     forKey: Keys.stepIndex)
+        ud.set(Array(completedSteps), forKey: Keys.completed)
+    }
+
+    private func restore() {
+        let ud = UserDefaults.standard
+        let savedId    = ud.string(forKey: Keys.providerId)
+        let savedIndex = ud.integer(forKey: Keys.stepIndex)
+        let savedDone  = ud.stringArray(forKey: Keys.completed) ?? []
+
+        if let id = savedId {
+            selectedProvider = providers.first { $0.id == id }
+        }
+        if let provider = selectedProvider {
+            currentStepIndex = min(savedIndex, provider.steps.count - 1)
+        }
+        completedSteps = Set(savedDone)
     }
 
     private func loadProviders() {

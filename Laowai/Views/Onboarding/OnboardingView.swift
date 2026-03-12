@@ -2,8 +2,8 @@ import SwiftUI
 
 struct OnboardingView: View {
     @AppStorage("hasOnboarded") private var hasOnboarded = false
+    @AppStorage("selectedCity") private var selectedCity = ""
     @State private var currentPage = 0
-    @State private var selectedCity: String? = nil
 
     var body: some View {
         ZStack {
@@ -20,6 +20,7 @@ struct OnboardingView: View {
                     selectedCity: $selectedCity,
                     onFinish: { hasOnboarded = true }
                 )
+
                 .tag(2)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
@@ -187,7 +188,7 @@ private struct FeatureRow: View {
 // MARK: - Page 03: City Selector
 
 private struct CitySelectorPage: View {
-    @Binding var selectedCity: String?
+    @Binding var selectedCity: String
     let onFinish: () -> Void
 
     private let cities: [(name: String, chinese: String, gradient: [Color])] = [

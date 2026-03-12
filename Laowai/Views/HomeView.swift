@@ -9,7 +9,7 @@ struct HomeView: View {
                 Color(hex: "#0D0D1A").ignoresSafeArea()
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
-                        HomeHeaderSection()
+                        HomeHeaderSection(city: appState.selectedCity)
                         PhaseFilterBar(currentPhase: $appState.currentPhase)
                         QuickActionsSection()
                         TipsSection(phase: appState.currentPhase)
@@ -24,6 +24,8 @@ struct HomeView: View {
 // MARK: - Header
 
 private struct HomeHeaderSection: View {
+    let city: String
+
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
@@ -32,7 +34,7 @@ private struct HomeHeaderSection: View {
                         .font(.caption.weight(.bold))
                         .foregroundStyle(Color(hex: "#E63946").opacity(0.8))
                         .tracking(2)
-                    Text("Welcome to China")
+                    Text(city.isEmpty ? "Welcome to China" : "Welcome to \(city)")
                         .font(.largeTitle.bold())
                         .foregroundStyle(.white)
                 }
