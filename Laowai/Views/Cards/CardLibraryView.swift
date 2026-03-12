@@ -1,11 +1,13 @@
 import SwiftUI
 
-private let bgColor = Color(hex: "#0D0D1A")
-private let cardBackground = Color(hex: "#161630")
-private let accentRed = Color(hex: "#E63946")
+private let bgColor       = Color(hex: "#0D0D1A")
+private let cardBg        = Color(hex: "#161630")
+private let accentRed     = Color(hex: "#E63946")
+private let accentGold    = Color(hex: "#F4A261")
 
 struct CardLibraryView: View {
     @StateObject private var viewModel = CardLibraryViewModel()
+    @EnvironmentObject private var favourites: FavouritesStore
     @State private var presentedCard: Card?
 
     private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
@@ -14,7 +16,6 @@ struct CardLibraryView: View {
         NavigationStack {
             ZStack {
                 bgColor.ignoresSafeArea()
-
                 VStack(spacing: 0) {
                     categoryFilter
                     cardGrid
@@ -23,7 +24,7 @@ struct CardLibraryView: View {
             .navigationTitle("Show & Point")
             .navigationBarTitleDisplayMode(.large)
             .toolbarColorScheme(.dark, for: .navigationBar)
-            .searchable(text: $viewModel.searchText, prompt: "Search cards")
+            .searchable(text: $viewModel.searchText, prompt: "Search in English, Chinese or pinyin…")
         }
         .preferredColorScheme(.dark)
         .fullScreenCover(item: $presentedCard) { card in
@@ -31,19 +32,41 @@ struct CardLibraryView: View {
         }
     }
 
+    // MARK: - Category filter bar
+
     private var categoryFilter: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                CategoryChip(title: "All", color: accentRed, isSelected: viewModel.selectedCategory == nil) {
+                // Favourites chip
+                CategoryChip(
+                    title: "Favourites",
+                    icon: "heart.fill",
+                    color: accentGold,
+                    isSelected: viewModel.showFavouritesOnly
+                ) {
+                    viewModel.showFavouritesOnly.toggle()
                     viewModel.selectedCategory = nil
                 }
+
+                // All chip
+                CategoryChip(
+                    title: "All",
+                    color: accentRed,
+                    isSelected: !viewModel.showFavouritesOnly && viewModel.selectedCategory == nil
+                ) {
+                    viewModel.showFavouritesOnly = false
+                    viewModel.selectedCategory = nil
+                }
+
+                // Category chips
                 ForEach(Card.Category.allCases, id: \.self) { category in
                     CategoryChip(
                         title: category.rawValue,
                         icon: category.icon,
                         color: Color(hex: category.color),
-                        isSelected: viewModel.selectedCategory == category
+                        isSelected: !viewModel.showFavouritesOnly && viewModel.selectedCategory == category
                     ) {
+                        viewModel.showFavouritesOnly = false
                         viewModel.selectedCategory = (viewModel.selectedCategory == category) ? nil : category
                     }
                 }
@@ -53,15 +76,20 @@ struct CardLibraryView: View {
         }
     }
 
+    // MARK: - Card grid
+
     private var cardGrid: some View {
-        ScrollView {
-            if viewModel.filteredCards.isEmpty {
+        let cards = viewModel.filteredCards(favourites: favourites)
+        return ScrollView {
+            if cards.isEmpty {
                 emptyState
             } else {
                 LazyVGrid(columns: columns, spacing: 12) {
-                    ForEach(viewModel.filteredCards) { card in
-                        CardCell(card: card)
-                            .onTapGesture { presentedCard = card }
+                    ForEach(cards) { card in
+                        CardCell(card: card, isFavourite: favourites.isFavourite(card)) {
+                            favourites.toggle(card)
+                        }
+                        .onTapGesture { presentedCard = card }
                     }
                 }
                 .padding(.horizontal, 16)
@@ -72,25 +100,35 @@ struct CardLibraryView: View {
 
     private var emptyState: some View {
         VStack(spacing: 12) {
-            Image(systemName: "magnifyingglass")
+            Image(systemName: viewModel.showFavouritesOnly ? "heart.slash" : "magnifyingglass")
                 .font(.system(size: 40))
-                .foregroundStyle(.white.opacity(0.3))
-            Text("No cards found")
+                .foregroundStyle(.white.opacity(0.25))
+                .padding(.top, 80)
+            Text(viewModel.showFavouritesOnly ? "No favourites yet" : "No cards found")
                 .font(.headline)
-                .foregroundStyle(.white.opacity(0.5))
+                .foregroundStyle(.white.opacity(0.45))
+            if viewModel.showFavouritesOnly {
+                Text("Tap the heart on any card to save it here")
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.3))
+            }
         }
         .frame(maxWidth: .infinity)
-        .padding(.top, 80)
     }
 }
 
+// MARK: - Card Cell
+
 private struct CardCell: View {
     let card: Card
+    let isFavourite: Bool
+    let onFavouriteTap: () -> Void
+
     private var accentColor: Color { Color(hex: card.category.color) }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack {
+            HStack(alignment: .top) {
                 Image(systemName: card.category.icon)
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(accentColor)
@@ -98,7 +136,17 @@ private struct CardCell: View {
                     .padding(6)
                     .background(accentColor.opacity(0.15))
                     .clipShape(RoundedRectangle(cornerRadius: 6))
+
                 Spacer()
+
+                Button(action: onFavouriteTap) {
+                    Image(systemName: isFavourite ? "heart.fill" : "heart")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(isFavourite ? Color(hex: "#F4A261") : .white.opacity(0.3))
+                        .frame(width: 28, height: 28)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
             }
 
             Text(card.chineseText)
@@ -114,14 +162,16 @@ private struct CardCell: View {
         }
         .padding(14)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(cardBackground)
+        .background(cardBg)
         .clipShape(RoundedRectangle(cornerRadius: 14))
         .overlay(
             RoundedRectangle(cornerRadius: 14)
-                .stroke(accentColor.opacity(0.15), lineWidth: 1)
+                .stroke(isFavourite ? Color(hex: "#F4A261").opacity(0.35) : accentColor.opacity(0.12), lineWidth: 1)
         )
     }
 }
+
+// MARK: - Category Chip
 
 private struct CategoryChip: View {
     let title: String
@@ -146,4 +196,3 @@ private struct CategoryChip: View {
         }
     }
 }
-

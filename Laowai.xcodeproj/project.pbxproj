@@ -15,6 +15,7 @@
 		25F1BB89DA5220564DA02C1F /* CardLibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E786E6BFECD182EC4672F01 /* CardLibraryViewModel.swift */; };
 		2E55E4D953C0C7A26C0B4EFC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5BBC3818D9DEDECA1E66E0 /* AppState.swift */; };
 		3BC0C8EF7AFABD044868A3A3 /* PaymentWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644E075540990884EE0C9AF0 /* PaymentWizardViewModel.swift */; };
+		40FCD0397F8BE626CBFCEDD8 /* FavouritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED53C7F487F31104F863207 /* FavouritesStore.swift */; };
 		411BBD892AFAF84C6AC8BA83 /* LaowaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2C8F1F0C9B8A4B8717593 /* LaowaiApp.swift */; };
 		4958FD2B94B01429D86F1273 /* PaymentStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C11BCBCC3B85ADD15D5E9B /* PaymentStepView.swift */; };
 		4C0FF976F41C7DD807FE4F2F /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E07AD4E08FB59056B4DA29 /* CameraViewModel.swift */; };
@@ -36,6 +37,7 @@
 		453E3E7CEC785D4E23852C35 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		4825B1E8D3F4481F897EE61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E71758195DDBF9ACA753E16 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5ED53C7F487F31104F863207 /* FavouritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesStore.swift; sourceTree = "<group>"; };
 		617A84BBEC2892E85125D2E7 /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		644E075540990884EE0C9AF0 /* PaymentWizardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWizardViewModel.swift; sourceTree = "<group>"; };
 		6CA5F5E96F0636C049451796 /* CameraTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTranslateView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				5E71758195DDBF9ACA753E16 /* Card.swift */,
+				5ED53C7F487F31104F863207 /* FavouritesStore.swift */,
 				3DDDDC5E0D99C758F06F2F7B /* PaymentStep.swift */,
 			);
 			path = Models;
@@ -252,6 +255,7 @@
 				4C8792AD24E22DA7B10DDD62 /* CardLibraryView.swift in Sources */,
 				25F1BB89DA5220564DA02C1F /* CardLibraryViewModel.swift in Sources */,
 				2444DBB4804BBE5BBF5646FD /* Color+Hex.swift in Sources */,
+				40FCD0397F8BE626CBFCEDD8 /* FavouritesStore.swift in Sources */,
 				D296CC00475CD32D8873FD7F /* HomeView.swift in Sources */,
 				D1ED56F8CD1DC7C4D16C17F6 /* JourneyView.swift in Sources */,
 				411BBD892AFAF84C6AC8BA83 /* LaowaiApp.swift in Sources */,
