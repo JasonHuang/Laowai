@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,25 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <!-- Background gradient view -->
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg-gradient">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" red="0.051" green="0.051" blue="0.102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <!-- 老 character -->
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老" textAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lao-label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&#32001;" textAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-11-laO">
                                 <rect key="frame" x="96.5" y="310" width="200" height="160"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="140" weight="heavy"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <!-- 外 character -->
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="外" textAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wai-label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&#22806;" textAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAi-22-laB">
                                 <rect key="frame" x="146.5" y="460" width="100" height="82"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="68" weight="semibold"/>
                                 <color key="textColor" red="0.902" green="0.224" blue="0.275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <!-- App name -->
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAOWAI" textAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="name-label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAOWAI" textAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-33-laC">
                                 <rect key="frame" x="96.5" y="580" width="200" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13" weight="semibold"/>
                                 <color key="textColor" red="0.902" green="0.224" blue="0.275" alpha="0.7" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,17 +34,12 @@
                         <viewLayoutGuide key="safeAreaLayoutGuide" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="0.051" green="0.051" blue="0.102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bg-gradient" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="bg-l"/>
-                            <constraint firstItem="bg-gradient" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="bg-r"/>
-                            <constraint firstItem="bg-gradient" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bg-t"/>
-                            <constraint firstItem="bg-gradient" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="bg-b"/>
-                            <constraint firstItem="lao-label" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lao-cx"/>
-                            <constraint firstItem="lao-label" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-60" id="lao-cy"/>
-                            <constraint firstAttribute="width" secondItem="lao-label" secondAttribute="width" multiplier="1" id="lao-w"/>
-                            <constraint firstItem="wai-label" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wai-cx"/>
-                            <constraint firstItem="wai-label" firstAttribute="top" secondItem="lao-label" secondAttribute="bottom" constant="8" id="wai-t"/>
-                            <constraint firstItem="name-label" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="name-cx"/>
-                            <constraint firstItem="name-label" firstAttribute="top" secondItem="wai-label" secondAttribute="bottom" constant="20" id="name-t"/>
+                            <constraint firstItem="aLo-11-laO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cX1-lo-001"/>
+                            <constraint firstItem="aLo-11-laO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-60" id="cY1-lo-002"/>
+                            <constraint firstItem="wAi-22-laB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cX2-wa-003"/>
+                            <constraint firstItem="wAi-22-laB" firstAttribute="top" secondItem="aLo-11-laO" secondAttribute="bottom" constant="8" id="cT1-wa-004"/>
+                            <constraint firstItem="nAm-33-laC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cX3-na-005"/>
+                            <constraint firstItem="nAm-33-laC" firstAttribute="top" secondItem="wAi-22-laB" secondAttribute="bottom" constant="20" id="cT2-na-006"/>
                         </constraints>
                     </view>
                 </viewController>
