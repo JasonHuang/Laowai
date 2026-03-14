@@ -2,7 +2,7 @@ name: Laowai
 options:
   bundleIdPrefix: com.codefern
   deploymentTarget:
-    iOS: "17.0"
+    iOS: "18.0"
 
 targets:
   Laowai:
