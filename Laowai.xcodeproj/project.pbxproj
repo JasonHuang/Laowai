@@ -22,7 +22,6 @@
 		4C8792AD24E22DA7B10DDD62 /* CardLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E5F07B44525B94E4916C0 /* CardLibraryView.swift */; };
 		84F6E0458D1C59FF24FEC6AA /* PaymentStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDDC5E0D99C758F06F2F7B /* PaymentStep.swift */; };
 		8B66658447C21421888199AD /* CameraTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5F5E96F0636C049451796 /* CameraTranslateView.swift */; };
-		A1D3BB127FB1D883CB3A4EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092D1522E28EC897623A64A5 /* LaunchScreen.storyboard */; };
 		D1ED56F8CD1DC7C4D16C17F6 /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9308771F8BEA2E6976A46C6 /* JourneyView.swift */; };
 		D23A5B66CF493A8705938238 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71758195DDBF9ACA753E16 /* Card.swift */; };
 		D296CC00475CD32D8873FD7F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7417ADC103DDD193E2AC3E52 /* HomeView.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		092D1522E28EC897623A64A5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15E4C429A1B68CBAA781EE5C /* payment_steps.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payment_steps.json; sourceTree = "<group>"; };
 		1FF2C8F1F0C9B8A4B8717593 /* LaowaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaowaiApp.swift; sourceTree = "<group>"; };
 		3DDDDC5E0D99C758F06F2F7B /* PaymentStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStep.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 			children = (
 				4825B1E8D3F4481F897EE61B /* Assets.xcassets */,
 				617A84BBEC2892E85125D2E7 /* cards.json */,
-				092D1522E28EC897623A64A5 /* LaunchScreen.storyboard */,
 				15E4C429A1B68CBAA781EE5C /* payment_steps.json */,
 			);
 			path = Resources;
@@ -239,7 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFB0EC13EC4D8B364466415E /* Assets.xcassets in Resources */,
-				A1D3BB127FB1D883CB3A4EC5 /* LaunchScreen.storyboard in Resources */,
 				1317EE0613B9233C5A27A83F /* cards.json in Resources */,
 				0C3684F7180A98FFFB9FE808 /* payment_steps.json in Resources */,
 			);
